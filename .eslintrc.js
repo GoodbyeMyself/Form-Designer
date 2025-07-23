@@ -3,8 +3,5 @@ module.exports = {
     globals: {
         page: true,
         REACT_APP_ENV: true,
-    },
-    "rules": {
-        "react/default-props-match-prop-types": "off"
     }
 };

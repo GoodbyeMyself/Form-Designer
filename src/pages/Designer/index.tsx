@@ -25,7 +25,6 @@ import { GlobalRegistry, KeyCode, Shortcut, createDesigner } from '@designable/c
 
 import {
     ActionsWidget,
-    // LogoWidget,
     MarkupSchemaWidget,
     PreviewWidget,
     SchemaEditorWidget,
@@ -67,8 +66,6 @@ import {
     // TextWidget,
     useDesigner
 } from '@designable/react';
-
-import { Button } from 'antd';
 
 setNpmCDNRegistry('//unpkg.com');
 
