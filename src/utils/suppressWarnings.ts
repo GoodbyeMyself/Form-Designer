@@ -10,7 +10,9 @@ export function suppressDefaultPropsWarnings() {
             if (
                 message.includes('defaultProps') ||
                 message.includes('Support for defaultProps') ||
-                message.includes('function components')
+                message.includes('function components') ||
+                message.includes('[antd: Modal]') ||
+                message.includes('`visible` will be removed')
             ) {
                 return; // 忽略 defaultProps 相关警告
             }
@@ -24,7 +26,9 @@ export function suppressDefaultPropsWarnings() {
             if (
                 message.includes('defaultProps') ||
                 message.includes('Support for defaultProps') ||
-                message.includes('function components')
+                message.includes('function components') ||
+                message.includes('[antd: Modal]') ||
+                message.includes('`visible` will be removed')
             ) {
                 return; // 忽略 defaultProps 相关错误
             }
@@ -46,7 +50,9 @@ export function suppressReactStrictModeWarnings() {
                 message.includes('defaultProps') ||
                 message.includes('Support for defaultProps') ||
                 message.includes('function components') ||
-                message.includes('React.StrictMode')
+                message.includes('React.StrictMode') ||
+                message.includes('[antd: Modal]') ||
+                message.includes('`visible` will be removed')
             ) {
                 return;
             }
