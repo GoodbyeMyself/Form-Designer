@@ -1,7 +1,7 @@
 // 系统默认配置
 import defaultSettings from '../config/defaultSettings';
 // 自定义 组件
-import { Footer, SelectLang } from '@/components';
+import { SelectLang } from '@/components';
 // API
 // ant design 组件
 import { ConfigProvider } from 'antd';
@@ -11,6 +11,12 @@ import type { Settings as LayoutSettings } from '@ant-design/pro-components';
 import { errorConfig } from './server/requestErrorConfig';
 // 运行时 配置
 import type { RequestConfig, RunTimeLayoutConfig } from '@umijs/max';
+// 抑制警告工具
+import { suppressDefaultPropsWarnings, suppressReactStrictModeWarnings } from './utils/suppressWarnings';
+
+// 抑制 defaultProps 相关警告
+suppressDefaultPropsWarnings();
+suppressReactStrictModeWarnings();
 
 /**
  * 全局初始状态
@@ -55,11 +61,6 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
             return (
                 <ConfigProvider
                     componentSize="middle"
-                    theme={{
-                        token: {
-                            colorPrimary: '#1890ff',
-                        },
-                    }}
                 >
                     {children}
                 </ConfigProvider>
