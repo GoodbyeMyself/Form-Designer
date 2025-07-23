@@ -37,11 +37,12 @@ export const FormItem: ISchema = {
             'x-component': 'SizeInput',
         },
         colon: {
-            type: 'boolean',
+            type: 'string',
+            enum: ['icon', 'text', 'default'],
             'x-decorator': 'FormItem',
-            'x-component': 'Switch',
+            'x-component': 'Select',
             'x-component-props': {
-                defaultChecked: true,
+                defaultValue: 'icon',
             },
         },
         asterisk: {
@@ -56,16 +57,16 @@ export const FormItem: ISchema = {
         },
         feedbackLayout: {
             type: 'string',
-            enum: ['loose', 'terse', 'popover', 'none', null],
+            enum: ['left', 'right', 'default'],
             'x-decorator': 'FormItem',
             'x-component': 'Select',
             'x-component-props': {
-                defaultValue: 'loose',
+                defaultValue: 'left',
             },
         },
         size: {
             type: 'string',
-            enum: ['large', 'small', 'default', null],
+            enum: ['large', 'small', 'default', 'middle'],
             'x-decorator': 'FormItem',
             'x-component': 'Select',
             'x-component-props': {
@@ -74,35 +75,35 @@ export const FormItem: ISchema = {
         },
         layout: {
             type: 'string',
-            enum: ['vertical', 'horizontal', 'inline', null],
+            enum: ['vertical', 'horizontal', 'inline', 'default'],
             'x-decorator': 'FormItem',
             'x-component': 'Select',
             'x-component-props': {
-                defaultValue: 'horizontal',
+                defaultValue: 'vertical',
             },
         },
 
         tooltipLayout: {
             type: 'string',
-            enum: ['icon', 'text', null],
+            enum: ['left', 'right', 'default'],
             'x-decorator': 'FormItem',
             'x-component': 'Select',
             'x-component-props': {
-                defaultValue: 'icon',
+                defaultValue: 'left',
             },
         },
         labelAlign: {
             type: 'string',
-            enum: ['left', 'right', null],
+            enum: ['loose', 'terse', 'popover', 'none', 'default'],
             'x-decorator': 'FormItem',
             'x-component': 'Select',
             'x-component-props': {
-                defaultValue: 'right',
+                defaultValue: 'loose',
             },
         },
         wrapperAlign: {
             type: 'string',
-            enum: ['left', 'right', null],
+            enum: ['left', 'right', 'default'],
             'x-decorator': 'FormItem',
             'x-component': 'Select',
             'x-component-props': {
